@@ -37,10 +37,6 @@
 ---
 
 ## About
-
-<table>
-<tr>
-<td>
   
 **NBGCurrencyNET** is a **high-quality** C# wrapper for NBG Currency API
 
@@ -48,21 +44,9 @@ It comes **filled** with **optimized** and **simple** Client which will be used 
 
 You don't neeed to* know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
 
-
-<p align="right">
-<sub>(Preview)</sub>
-</p>
-
-</td>
-</tr>
-</table>
-
 ## Installation
 
 ![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
-<p align="right">
-<sub>(Preview)</sub>
-</p>
 
 ##### There is three way to install NBGCurrencyNET
 * **[Download/Clone] and just put dll in your project 
