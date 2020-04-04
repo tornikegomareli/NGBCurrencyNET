@@ -48,7 +48,7 @@ It comes **filled** with **optimized** and **simple** Client which will be used 
 
 You don't neeed to* know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
 
-![ExampleCode](https://i.imgur.com/IHM8zKC.png)
+![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 <p align="right">
 <sub>(Preview)</sub>
 </p>
