@@ -42,11 +42,11 @@
 <tr>
 <td>
   
-**ArminC AutoExec** is a **high-quality** _config_ for _Counter-Strike: Global Offensive_ that aims to **improve the gameplay** and its **template is perfect**, enabling you to **customize** the game **settings** to your liking.
+**NBGCurrencyNET** is a **high-quality** C# wrapper for NBG Currency API
 
-It comes **filled** with **optimizations** that make use of the **all network capacity** and **game advantages**, overall **improving the gameplay** for a wide variety of _computers and players_.
+It comes **filled** with **optimized** and **simple** Client which will be used to make all basic requests for Georgian LARI currency.
 
-**Each and one** of the **commands** are **finely-tuned**, _enabling all game's capacity_ (compared to default settings), **helping you** through the matchmaking.
+**You don't neeed to* know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
 
 ![ArminC AutoExec Code](https://arminc.ga/resources/autoexec/arminc_autoexec_code.png)
 <p align="right">
