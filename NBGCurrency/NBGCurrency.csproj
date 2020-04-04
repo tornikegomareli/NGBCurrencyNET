@@ -17,10 +17,7 @@
 You can simply use NGB API with only one simple client with readable interface.</Description>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Class1.cs" />
-  </ItemGroup>
-  <ItemGroup>
+   <ItemGroup>
     <Folder Include="Configuration\" />
     <Folder Include="NetworkLayer\" />
     <Folder Include="Extensions\" />
