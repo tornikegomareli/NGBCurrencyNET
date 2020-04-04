@@ -11,7 +11,7 @@ namespace NBGCurrency.Client
     {
         private static NGBCurrencyClient _instance;
         private static volatile object _rootLock = new object();
-        private NGBNetworkManager networkLayer = NGBNetworkManager.SharedInstance;
+        private NBGNetworkManager networkLayer = NBGNetworkManager.SharedInstance;
 
         public static NGBCurrencyClient Shared
         {
