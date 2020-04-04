@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>ngbcurrencywrapper</PackageId>
+    <Authors>Tornike Gomareli</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Owners>Tornike Gomareli</Owners>
+    <PackageProjectUrl>https://github.com/tornikegomareli/NGBCurrencyNET</PackageProjectUrl>
+    <PackageReleaseNotes>Tested and published</PackageReleaseNotes>
+    <Summary>National Georgian Bank API wrapper </Summary>
+    <Title>NGBCurrencyNET</Title>
+    <Description>National Georgian Bank Currency API Wrapper in C#.
+
+You can simply use NGB API with only one simple client with readable interface.</Description>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>ngbcurrencywrapper</id>
+    <version>1.0.0</version>
+    <authors>tornikegomareli</authors>
+    <owners>tornikegomareli</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/tornikegomareli/NGBCurrencyNET</projectUrl>
+    <description>National Georgian Bank API interface wrapper in dotnet</description>
+    <releaseNotes>published</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>georgian national bank, currency</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+      </group>
+    </dependencies>
+  </metadata>
+</package>
