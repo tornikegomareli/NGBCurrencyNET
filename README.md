@@ -66,11 +66,11 @@ Our Hello World project has just one source file, `Program.cs` file, and it look
 Main client is NBGCurrencyClient, which is thread-safe singleton. All required method you can find in this class.
 Of course all of the methods are async and you need to call them with await.
 
-GetCurrencyAsync -> float
-GetCurrencyChangeAsync -> float
-GetCurrencyDescriptionAsync -> string
-GetCurrencyRateAsync -> int
-GetCurrentDateAsync  -> DateTime
+- GetCurrencyAsync -> float
+- GetCurrencyChangeAsync -> float
+- GetCurrencyDescriptionAsync -> string
+- GetCurrencyRateAsync -> int
+- GetCurrentDateAsync  -> DateTime
 
 
 ```c#
