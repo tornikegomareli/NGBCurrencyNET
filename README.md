@@ -59,6 +59,13 @@ You don't neeed to* know anything how API WORKS and how you must manage SOAP req
 
 ## Installation
 
+
+
+![ExampleCode](https://i.imgur.com/IHM8zKC.png)
+<p align="right">
+<sub>(Preview)</sub>
+</p>
+
 ##### Downloading and installing steps:
 * **[Download](https://github.com/ArmynC/ArminC-AutoExec/archive/master.zip)** the latest version of the config.
 * **Go** to the following path: `\...\Steam\userdata\<Your_SteamID3>\730\local\`
