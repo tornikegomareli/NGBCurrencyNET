@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using NBGCurrency.Client.Interfaces;
 using NBGCurrency.Configuration;
+using NBGCurrency.Extensions;
+using NBGCurrency.NetworkLayer;
 
 namespace NBGCurrency.Client
 {
@@ -30,9 +32,12 @@ namespace NBGCurrency.Client
             }
         }
 
-        public Task<string> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<string> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode)
         {
-            throw new NotImplementedException();
+            var networklayer = NGBNetworkManager.SharedInstance;
+            var content = await networklayer.MakeNGBSoapApiRequestAync("GetCurrency", currencyEnumCode.ToStr());
+
+            return content;
         }
 
         public Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode)
