@@ -12,6 +12,8 @@ using NBGCurrency.Configuration;
 
 namespace NBGCurrency.NetworkLayer
 {
+    
+
     public class NGBNetworkManager
     {
         private NGBNetworkManager()
