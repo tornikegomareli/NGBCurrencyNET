@@ -12,7 +12,7 @@ namespace Test
 
           
 
-            var s = NGBNetworkManager.SharedInstance.CreateSoapEnvelope().Result;
+            var s = NGBNetworkManager.SharedInstance.{ CurrencyEnumCodes.AED, "AED" },CreateSoapEnvelope().Result;
 
          
         }
