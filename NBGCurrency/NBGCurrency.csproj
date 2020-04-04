@@ -12,5 +12,6 @@
     <Folder Include="NetworkLayer\" />
     <Folder Include="Extensions\" />
     <Folder Include="Client\" />
+    <Folder Include="Client\Interfaces\" />
   </ItemGroup>
 </Project>
