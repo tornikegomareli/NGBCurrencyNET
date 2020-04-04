@@ -56,11 +56,11 @@ You don't neeed to know anything how API WORKS and how you must manage SOAP requ
 
 * Use Visual Studio Package Console :+1: 
 ```
-> Install-Package ngbcurrencywrapper -Version 1.0.0
+Install-Package ngbcurrencywrapper -Version 1.0.0
 ```
 * Use dotnet CLI :+1: 
 ```
-> dotnet add package ngbcurrencywrapper --version 1.0.0
+dotnet add package ngbcurrencywrapper --version 1.0.0
 ```
 
 
