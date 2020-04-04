@@ -6,7 +6,7 @@
 <h4 align="center">A highly readable and comfortable C# wrapper for National bank of Georgia currency API</h4>
 
 <p align="center">
-    <a href="https://github.com/ArmynC/ArminC-AutoExec/commits/master">
+    <a href="https://github.com/tornikegomareli/NGBCurrencyNET/commits/master">
     <img src="https://img.shields.io/github/last-commit/ArmynC/ArminC-AutoExec.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub last commit">
     <a href="https://github.com/ArmynC/ArminC-AutoExec/issues">
@@ -23,14 +23,9 @@
 <p align="center">
   <a href="#about">About</a> •
   <a href="#installation">Installation</a> •
-  <a href="#updating">Updating</a> •
-  <a href="#features">Features</a> •
-  <a href="#binds">Binds</a> •
-  <a href="#wiki">Wiki</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#author">Author</a> •
   <a href="#support">Support</a> •
-  <a href="#donate">Donate</a> •
   <a href="#license">License</a>
 </p>
 
