@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using NBGCurrency.Client;
 using NBGCurrency.Client.Interfaces;
 using NBGCurrency.Configuration;
 using NBGCurrency.Extensions;

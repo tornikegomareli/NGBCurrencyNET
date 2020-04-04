@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBGCurrency", "NBGCurrency\NBGCurrency.csproj", "{6A167BA6-0749-46C2-89F5-34C41C090F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBGCurrency.Tests", "NBGCurrency.Tests\NBGCurrency.Tests.csproj", "{EF6A7AA2-CB2F-4526-A110-FA3141989F5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBGCurrency.Tests", "NBGCurrency.Tests\NBGCurrency.Tests.csproj", "{BA7F4F8B-F115-4F5C-9181-C87C29561ED7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,9 @@ Global
 		{6A167BA6-0749-46C2-89F5-34C41C090F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A167BA6-0749-46C2-89F5-34C41C090F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A167BA6-0749-46C2-89F5-34C41C090F0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF6A7AA2-CB2F-4526-A110-FA3141989F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF6A7AA2-CB2F-4526-A110-FA3141989F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF6A7AA2-CB2F-4526-A110-FA3141989F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF6A7AA2-CB2F-4526-A110-FA3141989F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7F4F8B-F115-4F5C-9181-C87C29561ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7F4F8B-F115-4F5C-9181-C87C29561ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7F4F8B-F115-4F5C-9181-C87C29561ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7F4F8B-F115-4F5C-9181-C87C29561ED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

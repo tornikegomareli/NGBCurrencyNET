@@ -27,7 +27,6 @@ namespace NBGCurrency.Tests
         public async Task Test_Current_Date_Type_Is_DateTime()
         {
             var currentValue = await client.GetCurrentDateAsync();
-            var currentDateTime = DateTime.Now.Date;
 
             Assert.IsInstanceOf(typeof(DateTime), currentValue);
         }
