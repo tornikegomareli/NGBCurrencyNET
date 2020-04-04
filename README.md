@@ -7,10 +7,8 @@
 
 <p align="center">
     <a href="https://github.com/tornikegomareli/NGBCurrencyNET/commits/master">
-    <img src="https://img.shields.io/github/last-commit/?style=flat-square&logo=github&logoColor=white"
+      <img src="https://img.shields.io/github/last-commit/ArmynC/ArminC-AutoExec.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub last commit">
-        <img src="https://img.shields.io/github/last-commit/ArmynC/ArminC-AutoExec.svg?style=flat-square&logo=github&logoColor=white"
-             alt="GitHub last commit">
     <a href="https://github.com/ArmynC/ArminC-AutoExec/issues">
     <img src="https://img.shields.io/github/issues-raw/ArmynC/ArminC-AutoExec.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub issues">
