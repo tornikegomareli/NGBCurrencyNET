@@ -61,7 +61,7 @@ You don't neeed to* know anything how API WORKS and how you must manage SOAP req
 
 
 
-![ExampleCode](https://i.imgur.com/IHM8zKC.png)
+![ExampleCode](https://gph.is/g/4MkelBV)
 <p align="right">
 <sub>(Preview)</sub>
 </p>
