@@ -5,9 +5,9 @@ using System.Xml.Linq;
 
 namespace NBGCurrency.Extensions
 {
-    public static class SoapResponseExtensions
+    internal static class SoapResponseExtensions
     {
-        public static string ToValue(this string soapResponse, string actionName)
+        internal static string ToValue(this string soapResponse, string actionName)
         {
             XDocument doc = XDocument.Parse(soapResponse);
             XNamespace ns = "urn:NBGCurrency";

@@ -32,20 +32,20 @@ namespace NBGCurrency.Client
             }
         }
 
-        public async Task<string> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<float> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode)
         {
             var responseNs = "GetCurrency";
 
             var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
-            return content.ToValue(responseNs);
+            return float.Parse(content.ToValue(responseNs));
         }
 
-        public async Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<float> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode)
         {
             var responseNs = "GetCurrencyChange";
 
             var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
-            return content.ToValue(responseNs);
+            return float.Parse(content.ToValue(responseNs));
         }
 
         public async Task<string> GetCurrencyDescriptionAsync(CurrencyEnumCodes currencyEnumCode)
@@ -56,20 +56,22 @@ namespace NBGCurrency.Client
             return content.ToValue(responseNs);
         }
 
-        public async Task<string> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<int> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode)
         {
             var responseNs = "GetCurrencyRate";
 
             var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
-            return content.ToValue(responseNs);
+            return int.Parse(content.ToValue(responseNs));
         }
 
-        public async Task<string> GetCurrentDateAsync()
+        public async Task<DateTime> GetCurrentDateAsync()
         {
             var responseNs = "GetDate";
 
             var content = await networkLayer.MakeNBGDateEnvelope(responseNs);
-            return content.ToValue(responseNs);
+            DateTime result = (DateTime)Convert.ChangeType(content.ToValue(responseNs), typeof(DateTime));
+
+            return result;
         }
     }
 }

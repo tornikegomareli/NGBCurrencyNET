@@ -13,7 +13,7 @@ using NBGCurrency.Extensions;
 
 namespace NBGCurrency.NetworkLayer
 {
-    public class NGBNetworkManager
+    internal class NGBNetworkManager
     {
         private NGBNetworkManager()
         {
@@ -22,7 +22,7 @@ namespace NBGCurrency.NetworkLayer
         private static NGBNetworkManager _instance;
         private static volatile object _rootLock = new object();
 
-        public static NGBNetworkManager SharedInstance
+        internal static NGBNetworkManager SharedInstance
         {
             get 
 			{
@@ -42,7 +42,7 @@ namespace NBGCurrency.NetworkLayer
 		}
 
 
-        public async Task<string> MakeNBGDateEnvelope(string actionName)
+        internal async Task<string> MakeNBGDateEnvelope(string actionName)
         {
             string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
           <Envelope xmlns=""http://schemas.xmlsoap.org/soap/envelope/"">

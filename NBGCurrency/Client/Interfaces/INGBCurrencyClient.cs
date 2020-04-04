@@ -6,10 +6,10 @@ namespace NBGCurrency.Client.Interfaces
 {
     public interface INGBCurrencyClient
     {
-        Task<string> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode);
-        Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode);
+        Task<float> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode);
+        Task<float> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode);
         Task<string> GetCurrencyDescriptionAsync(CurrencyEnumCodes currencyEnumCode);
-        Task<string> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode);
-        Task<string> GetCurrentDateAsync();
+        Task<int> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode);
+        Task<DateTime> GetCurrentDateAsync();
     }
 }
