@@ -49,11 +49,11 @@ AED, AMD, AUD, AZN, BGN, BYR, CAD, CHF, CNY, CZK, DKK, EEK, EGP, EUR, GBP, HKD, 
 
 * Use Visual Studio Package Console :+1: 
 ```
-Install-Package ngbcurrencywrapper -Version 1.0.0
+Install-Package nbgcurrencynet -Version 1.0.0
 ```
 * Use dotnet CLI :+1: 
 ```
-dotnet add package ngbcurrencywrapper --version 1.0.0
+dotnet add package nbgcurrencynet --version 1.0.0
 ```
 
 ## Using NBGCurrencyNET in your project
