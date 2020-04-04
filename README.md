@@ -48,6 +48,8 @@ You don't neeed to know anything how API WORKS and how you must manage SOAP requ
 
 ![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 
+:+1: This PR looks great - it's ready to merge! :shipit:
+
 ##### There is three way to install NBGCurrencyNET
 * Download/Clone and just put dll in your project 
 * Use Visual Studio Package Console 
