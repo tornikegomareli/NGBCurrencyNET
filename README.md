@@ -44,9 +44,6 @@ AED, AMD, AUD, AZN, BGN, BYR, CAD, CHF, CNY, CZK, DKK, EEK, EGP, EUR, GBP, HKD, 
 
 ![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 
-
-
-
 ##### There is three way to install NBGCurrencyNET :shipit:
 * Download/Clone and just put dll in your project :+1: 
 
@@ -59,6 +56,30 @@ Install-Package ngbcurrencywrapper -Version 1.0.0
 dotnet add package ngbcurrencywrapper --version 1.0.0
 ```
 
+## Using NBGCurrencyNET in your project
+You can use NBGCurrencyNET in you project by either directly using main namespace.
+
+To get you started quickly, let's take a look at a few ways to get simple Hello World project working.
+
+Our Hello World project has just one source file, `Program.cs` file, and it looks like this:
+```c#
+using System;
+using NBGCurrency.Client;
+using NBGCurrency.Configuration;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        public async void Main(string[] args)
+        {
+            var client = NBGCurrencyClient.Shared;
+
+            var usdToGel = await client.GetCurrencyAsync(CurrencyEnumCodes.USD);
+        }
+    }
+}
+```
 
 ## Contributing
 
