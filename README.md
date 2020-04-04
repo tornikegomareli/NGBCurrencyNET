@@ -50,13 +50,19 @@ You don't neeed to know anything how API WORKS and how you must manage SOAP requ
 
 
 
+
 ##### There is three way to install NBGCurrencyNET :shipit:
 * Download/Clone and just put dll in your project :+1: 
 
 * Use Visual Studio Package Console :+1: 
+```
 > Install-Package ngbcurrencywrapper -Version 1.0.0
+```
 * Use dotnet CLI :+1: 
+```
 > dotnet add package ngbcurrencywrapper --version 1.0.0
+```
+
 
 ## Contributing
 
