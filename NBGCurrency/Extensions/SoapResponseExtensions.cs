@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace NBGCurrency.Extensions
@@ -11,12 +12,12 @@ namespace NBGCurrency.Extensions
             XDocument doc = XDocument.Parse(soapResponse);
             XNamespace ns = "urn:NBGCurrency";
             IEnumerable<XElement> responses = doc.Descendants(ns + $"{actionName}Response");
-            foreach (XElement response in responses)
-            {
-                var code = response.Element("return").Value;
-            }
 
-            return null;
+            var rootResponse = responses.First();
+
+            var value = rootResponse.Element("return").Value;
+
+            return value;           
         }
     }
 }
