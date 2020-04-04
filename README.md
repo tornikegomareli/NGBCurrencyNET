@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a https://nbg.gov.ge/api.html"><img src="https://upload.wikimedia.org/wikipedia/ka/thumb/8/87/Logo_of_National_Bank_of_Georgia.svg/1200px-Logo_of_National_Bank_of_Georgia.svg.png" alt="NBG" height="250" width="250">.></a>
+  <a https://nbg.gov.ge/api.html"><img src="https://upload.wikimedia.org/wikipedia/ka/thumb/8/87/Logo_of_National_Bank_of_Georgia.svg/1200px-Logo_of_National_Bank_of_Georgia.svg.png" alt="NBG" height="250" width="250"></a>
 </h1>
 
 <h4 align="center">A high-quality CS:GO config built for gamers.</h4>
