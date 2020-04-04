@@ -77,24 +77,20 @@ Got **something interesting** you'd like to **share**? Feel free to open issue
 
 ## Author
 
-| [![ArminC](https://github.com/tornikegomareli) 	|
-|:---------------------------------------------------------------------------------------------------------:	|
-|                                            **Tornike Gomareli**                                            	|
+[Tornike Gomareli](https://github.com/tornikegomareli)
 
 ## Support
 
+If you will like my work, just STAR repository.
+
 Reach out to me at one of the following places:
 
-- Website at [arminc.ga](https://arminc.ga)
-- Steam Profile at **[ArminC](https://steamcommunity.com/id/arminc/)**
-- E-Mail: **arminandrey@gmail.com**
-
-## Donate
-
-[![Donate via Steam](https://img.shields.io/badge/Donate%20via-Steam-blue.svg?&style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/tradeoffer/new/?partner=133646824&token=XiRncDom)
+- Facebook at [FB](https://www.facebook.com/microg)
+- Twitter **[tornikegomareli](https://twitter.com/tornikegomareli)**
+- E-Mail: **gomarelidevelopment@gmail.com**
 
 ## License
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-- Copyright © [ArminC](https://arminc.ga "ArminC Directory Database").
+- Copyright © [TornikeGomareli](https://twitter.com/tornikegomareli).
