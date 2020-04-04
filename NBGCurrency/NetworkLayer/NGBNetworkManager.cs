@@ -9,11 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using NBGCurrency.Configuration;
+using NBGCurrency.Extensions;
 
 namespace NBGCurrency.NetworkLayer
 {
-    
-
     public class NGBNetworkManager
     {
         private NGBNetworkManager()
@@ -43,7 +42,23 @@ namespace NBGCurrency.NetworkLayer
 		}
 
 
-        internal async Task<string> MakeNGBSoapApiRequestAync(string actionName, string currency) 
+        public async Task<string> MakeNBGDateEnvelope(string actionName)
+        {
+            string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
+          <Envelope xmlns=""http://schemas.xmlsoap.org/soap/envelope/"">
+              <Body>
+                 <{actionName} xmlns=""urn: NBGCurrency""/>
+              </Body>
+          </Envelope>";
+
+          HttpResponseMessage response = await XmlRequestAsync(Constants.NGBPhpServerApiUrl, envelopeString);
+
+          string content = await response.Content.ReadAsStringAsync();
+
+          return content;
+        }
+
+        internal async Task<string> MakeNBGCurrencyEnvelope(string actionName, string currency) 
 		{
             var currentEnvelopeString = CreateNGBSoapEnvelope(actionName, currency);
 

@@ -11,7 +11,7 @@ namespace NBGCurrency.Client
     {
         private static NGBCurrencyClient _instance;
         private static volatile object _rootLock = new object();
-
+        private NGBNetworkManager networkLayer = NGBNetworkManager.SharedInstance;
 
         public static NGBCurrencyClient Shared
         {
@@ -34,30 +34,42 @@ namespace NBGCurrency.Client
 
         public async Task<string> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode)
         {
-            var networklayer = NGBNetworkManager.SharedInstance;
-            var content = await networklayer.MakeNGBSoapApiRequestAync("GetCurrency", currencyEnumCode.ToStr());
+            var responseNs = "GetCurrency";
 
-            return content;
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            return content.ToValue(responseNs);
         }
 
-        public Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode)
         {
-            throw new NotImplementedException();
+            var responseNs = "GetCurrencyChange";
+
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            return content.ToValue(responseNs);
         }
 
-        public Task<string> GetCurrencyDescriptionAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<string> GetCurrencyDescriptionAsync(CurrencyEnumCodes currencyEnumCode)
         {
-            throw new NotImplementedException();
+            var responseNs = "GetCurrencyDescription";
+
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            return content.ToValue(responseNs);
         }
 
-        public Task<string> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode)
+        public async Task<string> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode)
         {
-            throw new NotImplementedException();
+            var responseNs = "GetCurrencyRate";
+
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            return content.ToValue(responseNs);
         }
 
-        public Task<string> GetDate(CurrencyEnumCodes currencyEnumCode)
+        public async Task<string> GetCurrentDateAsync()
         {
-            throw new NotImplementedException();
+            var responseNs = "GetDate";
+
+            var content = await networkLayer.MakeNBGDateEnvelope(responseNs);
+            return content.ToValue(responseNs);
         }
     }
 }

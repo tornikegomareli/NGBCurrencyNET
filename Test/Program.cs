@@ -10,10 +10,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            var ngbClient = NGBCurrencyClient.Shared.GetCurrencyAsync(NBGCurrency.Configuration.CurrencyEnumCodes.USD)
-					.Result;
+            var ngbClient = NGBCurrencyClient.Shared.GetCurrentDateAsync().Result;
 
-            var value = ngbClient.ToValue();
         }
     }
 }

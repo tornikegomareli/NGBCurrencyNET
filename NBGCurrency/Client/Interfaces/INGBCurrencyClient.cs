@@ -10,6 +10,6 @@ namespace NBGCurrency.Client.Interfaces
         Task<string> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode);
         Task<string> GetCurrencyDescriptionAsync(CurrencyEnumCodes currencyEnumCode);
         Task<string> GetCurrencyRateAsync(CurrencyEnumCodes currencyEnumCode);
-        Task<string> GetDate(CurrencyEnumCodes currencyEnumCode);
+        Task<string> GetCurrentDateAsync();
     }
 }
