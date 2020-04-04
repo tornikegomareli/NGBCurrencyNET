@@ -40,6 +40,17 @@ namespace NBGCurrency.NetworkLayer
             }
 		}
 
+
+        internal async Task<string> MakeNGBSoapApiRequestAync(string actionName, string currency) 
+		{
+            var currentEnvelopeString = CreateNGBSoapEnvelope(actionName, currency);
+
+            HttpResponseMessage response = await XmlRequestAsync(Constants.NGBPhpServerApiUrl, currentEnvelopeString);
+            string content = await response.Content.ReadAsStringAsync();
+
+            return content;
+        }
+
         internal string CreateNGBSoapEnvelope(string actionName, string currency)
         {
             string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -54,7 +65,7 @@ namespace NBGCurrency.NetworkLayer
             return envelopeString;
         }
 
-        internal async Task<HttpResponseMessage> PostXmlRequest(string baseUrl, string xmlString)
+        internal async Task<HttpResponseMessage> XmlRequestAsync(string baseUrl, string xmlString)
         {
             using (var httpClient = new HttpClient())
             {
