@@ -42,7 +42,7 @@
 
 It comes **filled** with **optimized** and **simple** Client which will be used to make all basic requests for Georgian LARI currency.
 
-You don't neeed to* know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
+You don't neeed to know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
 
 ## Installation
 
