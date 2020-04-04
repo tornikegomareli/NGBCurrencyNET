@@ -62,6 +62,17 @@ You can use NBGCurrencyNET in you project by either directly using main namespac
 To get you started quickly, let's take a look at a few ways to get simple Hello World project working.
 
 Our Hello World project has just one source file, `Program.cs` file, and it looks like this:
+
+Main client is NBGCurrencyClient, which is thread-safe singleton. All required method you can find in this class.
+Of course all of the methods are async and you need to call them with await.
+
+GetCurrencyAsync -> float
+GetCurrencyChangeAsync -> float
+GetCurrencyDescriptionAsync -> string
+GetCurrencyRateAsync -> int
+GetCurrentDateAsync  -> DateTime
+
+
 ```c#
 using System;
 using NBGCurrency.Client;
@@ -76,9 +87,14 @@ namespace HelloWorld
             var client = NBGCurrencyClient.Shared;
 
             var usdToGel = await client.GetCurrencyAsync(CurrencyEnumCodes.USD);
+            var change = await client.GetCurrencyChangeAsync(CurrencyEnumCodes.USD);
+            var rate = await client.GetCurrencyChangeAsync(CurrencyEnumCodes.USD);
+            var description = await client.GetCurrencyDescriptionAsync(CurrencyEnumCodes.USD);
+            var todayDate = await client.GetCurrentDateAsync();
         }
     }
 }
+
 ```
 
 ## Contributing
