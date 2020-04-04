@@ -49,11 +49,11 @@ You don't neeed to* know anything how API WORKS and how you must manage SOAP req
 ![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 
 ##### There is three way to install NBGCurrencyNET
-* **[Download/Clone] and just put dll in your project 
+* Download/Clone and just put dll in your project 
 * Use Visual Studio Package Console 
-Install-Package ngbcurrencywrapper -Version 1.0.0
+> Install-Package ngbcurrencywrapper -Version 1.0.0
 * Use dotnet CLI 
-dotnet add package ngbcurrencywrapper --version 1.0.0
+> dotnet add package ngbcurrencywrapper --version 1.0.0
 
 ## Contributing
 
