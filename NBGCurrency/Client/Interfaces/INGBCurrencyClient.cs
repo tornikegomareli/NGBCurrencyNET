@@ -4,7 +4,7 @@ using NBGCurrency.Configuration;
 
 namespace NBGCurrency.Client.Interfaces
 {
-    public interface INGBCurrencyClient
+    public interface INBGCurrencyClient
     {
         Task<float> GetCurrencyAsync(CurrencyEnumCodes currencyEnumCode);
         Task<float> GetCurrencyChangeAsync(CurrencyEnumCodes currencyEnumCode);

@@ -13,16 +13,16 @@ using NBGCurrency.Extensions;
 
 namespace NBGCurrency.NetworkLayer
 {
-    internal class NGBNetworkManager
+    internal class NBGNetworkManager
     {
-        private NGBNetworkManager()
+        private NBGNetworkManager()
         {
         }
 
-        private static NGBNetworkManager _instance;
+        private static NBGNetworkManager _instance;
         private static volatile object _rootLock = new object();
 
-        internal static NGBNetworkManager SharedInstance
+        internal static NBGNetworkManager SharedInstance
         {
             get 
 			{
@@ -32,7 +32,7 @@ namespace NBGCurrency.NetworkLayer
                     {
                         if (_instance == null)
                         {
-                            _instance = new NGBNetworkManager();
+                            _instance = new NBGNetworkManager();
 					}
                     }
                 }
@@ -42,7 +42,7 @@ namespace NBGCurrency.NetworkLayer
 		}
 
 
-        internal async Task<string> MakeNBGDateEnvelope(string actionName)
+        internal async Task<string> MakeNBGCurrentDateCall(string actionName)
         {
             string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
           <Envelope xmlns=""http://schemas.xmlsoap.org/soap/envelope/"">
@@ -51,7 +51,7 @@ namespace NBGCurrency.NetworkLayer
               </Body>
           </Envelope>";
 
-          HttpResponseMessage response = await XmlRequestAsync(Constants.NGBPhpServerApiUrl, envelopeString);
+          HttpResponseMessage response = await XmlRequestAsync(Constants.NBGPhpServerApiUrl, envelopeString);
 
           string content = await response.Content.ReadAsStringAsync();
 
@@ -60,15 +60,15 @@ namespace NBGCurrency.NetworkLayer
 
         internal async Task<string> MakeNBGCurrencyEnvelope(string actionName, string currency) 
 		{
-            var currentEnvelopeString = CreateNGBSoapEnvelope(actionName, currency);
+            var currentEnvelopeString = CreateNBGSoapEnvelope(actionName, currency);
 
-            HttpResponseMessage response = await XmlRequestAsync(Constants.NGBPhpServerApiUrl, currentEnvelopeString);
+            HttpResponseMessage response = await XmlRequestAsync(Constants.NBGPhpServerApiUrl, currentEnvelopeString);
             string content = await response.Content.ReadAsStringAsync();
 
             return content;
         }
 
-        internal string CreateNGBSoapEnvelope(string actionName, string currency)
+        internal string CreateNBGSoapEnvelope(string actionName, string currency)
         {
             string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
           <Envelope xmlns=""http://schemas.xmlsoap.org/soap/envelope/"">

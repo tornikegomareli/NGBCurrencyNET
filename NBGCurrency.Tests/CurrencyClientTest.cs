@@ -3,15 +3,15 @@ using System.Threading.Tasks;
 using NBGCurrency.Client;
 using NUnit.Framework;
 
-namespace NGBCurrency.Tests
+namespace NBGCurrency.Tests
 {
     public class CurrencyClientTest
     {
-        NGBCurrencyClient client;
+        NBGCurrencyClient client;
         [SetUp]
         public void Setup()
         {
-            client = NGBCurrencyClient.Shared;
+            client = NBGCurrencyClient.Shared;
         }
 
         [Test]

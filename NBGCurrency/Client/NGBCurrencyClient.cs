@@ -7,13 +7,13 @@ using NBGCurrency.NetworkLayer;
 
 namespace NBGCurrency.Client
 {
-    public class NGBCurrencyClient : INGBCurrencyClient
+    public class NBGCurrencyClient : INBGCurrencyClient
     {
-        private static NGBCurrencyClient _instance;
+        private static NBGCurrencyClient _instance;
         private static volatile object _rootLock = new object();
         private NBGNetworkManager networkLayer = NBGNetworkManager.SharedInstance;
 
-        public static NGBCurrencyClient Shared
+        public static NBGCurrencyClient Shared
         {
             get
             {
@@ -23,7 +23,7 @@ namespace NBGCurrency.Client
                     {
                         if (_instance == null)
                         {
-                            _instance = new NGBCurrencyClient();
+                            _instance = new NBGCurrencyClient();
                         }
                     }
                 }
@@ -68,7 +68,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetDate";
 
-            var content = await networkLayer.MakeNBGDateEnvelope(responseNs);
+            var content = await networkLayer.MakeNBGCurrentDateCall(responseNs);
             DateTime result = (DateTime)Convert.ChangeType(content.ToValue(responseNs), typeof(DateTime));
 
             return result;

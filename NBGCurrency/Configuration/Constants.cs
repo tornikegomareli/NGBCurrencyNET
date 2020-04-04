@@ -6,7 +6,7 @@ namespace NBGCurrency.Configuration
     internal static class Constants
     {
         internal static string MainWsdlUrl = "http://nbg.gov.ge/currency.wsdl";
-        internal static string NGBPhpServerApiUrl = "http://nbg.gov.ge/currency_service.php";
+        internal static string NBGPhpServerApiUrl = "http://nbg.gov.ge/currency_service.php";
 
         public static Dictionary<CurrencyEnumCodes, String> CurrencyCodes = new Dictionary<CurrencyEnumCodes, string>()
         {
