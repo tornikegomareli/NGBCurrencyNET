@@ -1,10 +1,13 @@
 ﻿using System;
+using NBGCurrency.Configuration;
+
 namespace NBGCurrency.Extensions
 {
-    public class CurrencyEnumExtension
+    internal static class CurrencyEnumExtension
     {
-        public CurrencyEnumExtension()
+        internal static string ToStr(this CurrencyEnumCodes currencyEnumCode)
         {
-        }
+            return Constants.CurrencyCodes[currencyEnumCode];
+		}
     }
 }

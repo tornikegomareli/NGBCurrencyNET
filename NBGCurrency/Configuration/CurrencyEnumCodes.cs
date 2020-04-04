@@ -1,7 +1,7 @@
 ﻿using System;
 namespace NBGCurrency.Configuration
 {
-    internal enum CurrencyEnumCodes
+    public enum CurrencyEnumCodes
     {
         AED = 1,
         AMD = 2,
