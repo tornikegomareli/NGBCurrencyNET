@@ -40,24 +40,21 @@ namespace NBGCurrency.NetworkLayer
             }
 		}
 
-        public async Task<string> CreateSoapEnvelope()
+        internal string CreateNGBSoapEnvelope(string actionName, string currency)
         {
-            string soapString = @"<?xml version=""1.0"" encoding=""utf-8""?>
+            string envelopeString = $@"<?xml version=""1.0"" encoding=""utf-8""?>
           <Envelope xmlns=""http://schemas.xmlsoap.org/soap/envelope/"">
               <Body>
-                 <GetCurrency xmlns=""urn: NBGCurrency"">
-                      <code>USD</code >
-                 </GetCurrency >
+                 <{actionName} xmlns=""urn: NBGCurrency"">
+                      <code>{currency}</code >
+                 </{actionName}>
               </Body>
           </Envelope>";
 
-            HttpResponseMessage response = await PostXmlRequest(Constants.NGBPhpServerApiUrl, soapString);
-            string content = await response.Content.ReadAsStringAsync();
-
-            return content;
+            return envelopeString;
         }
 
-        public static async Task<HttpResponseMessage> PostXmlRequest(string baseUrl, string xmlString)
+        internal async Task<HttpResponseMessage> PostXmlRequest(string baseUrl, string xmlString)
         {
             using (var httpClient = new HttpClient())
             {
