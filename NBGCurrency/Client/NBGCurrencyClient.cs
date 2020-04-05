@@ -9,7 +9,7 @@ namespace NBGCurrency.Client
 {
     public class NBGCurrencyClient : INBGCurrencyClient
     {
-        private static Lazy<NBGCurrencyClient> _instance = new Lazy<NBGCurrencyClient>(() => new NBGCurrencyClient());
+        private static readonly Lazy<NBGCurrencyClient> _instance = new Lazy<NBGCurrencyClient>(() => new NBGCurrencyClient());
         private NBGNetworkManager networkLayer = NBGNetworkManager.SharedInstance;
 
         public static NBGCurrencyClient Shared
