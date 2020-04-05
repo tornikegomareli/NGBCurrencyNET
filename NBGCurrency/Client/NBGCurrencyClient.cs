@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using NBGCurrency.Client;
 using NBGCurrency.Client.Interfaces;
 using NBGCurrency.Configuration;
 using NBGCurrency.Extensions;
@@ -10,26 +9,14 @@ namespace NBGCurrency.Client
 {
     public class NBGCurrencyClient : INBGCurrencyClient
     {
-        private static NBGCurrencyClient _instance;
-        private static volatile object _rootLock = new object();
+        private static Lazy<NBGCurrencyClient> _instance = new Lazy<NBGCurrencyClient>(() => new NBGCurrencyClient());
         private NBGNetworkManager networkLayer = NBGNetworkManager.SharedInstance;
 
         public static NBGCurrencyClient Shared
         {
             get
             {
-                if (_instance == null)
-                {
-                    lock (_rootLock)
-                    {
-                        if (_instance == null)
-                        {
-                            _instance = new NBGCurrencyClient();
-                        }
-                    }
-                }
-
-                return _instance;
+                return _instance.Value;
             }
         }
 
@@ -37,7 +24,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrency";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
             return float.Parse(content.ToValue(responseNs));
         }
 
@@ -45,7 +32,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyChange";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
             return float.Parse(content.ToValue(responseNs));
         }
 
@@ -53,7 +40,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyDescription";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
             return content.ToValue(responseNs);
         }
 
@@ -61,7 +48,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyRate";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToStr());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
             return int.Parse(content.ToValue(responseNs));
         }
 

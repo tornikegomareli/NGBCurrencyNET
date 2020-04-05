@@ -1,13 +1,9 @@
-﻿using System;
-using NBGCurrency.Configuration;
+﻿using NBGCurrency.Configuration;
 
 namespace NBGCurrency.Extensions
 {
     internal static class CurrencyEnumExtension
     {
-        internal static string ToStr(this CurrencyEnumCodes currencyEnumCode)
-        {
-            return Constants.CurrencyCodes[currencyEnumCode];
-		}
+        internal static string toEnumString(this CurrencyEnumCodes currencyEnumCode) => Constants.CurrencyCodes[currencyEnumCode];
     }
 }
