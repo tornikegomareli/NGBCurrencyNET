@@ -24,7 +24,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrency";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToEnumString());
             return float.Parse(content.ToValue(responseNs));
         }
 
@@ -32,7 +32,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyChange";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToEnumString());
             return float.Parse(content.ToValue(responseNs));
         }
 
@@ -40,7 +40,7 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyDescription";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToEnumString());
             return content.ToValue(responseNs);
         }
 
@@ -48,16 +48,16 @@ namespace NBGCurrency.Client
         {
             var responseNs = "GetCurrencyRate";
 
-            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.toEnumString());
+            var content = await networkLayer.MakeNBGCurrencyEnvelope(responseNs, currencyEnumCode.ToEnumString());
             return int.Parse(content.ToValue(responseNs));
         }
 
-        public async Task<DateTime> GetCurrentDateAsync()
+        public async Task<DateTimeOffset> GetCurrentDateAsync()
         {
             var responseNs = "GetDate";
 
             var content = await networkLayer.MakeNBGCurrentDateCall(responseNs);
-            DateTime result = (DateTime)Convert.ChangeType(content.ToValue(responseNs), typeof(DateTime));
+            var result = DateTimeOffset.Parse(content.ToValue(responseNs));
 
             return result;
         }
