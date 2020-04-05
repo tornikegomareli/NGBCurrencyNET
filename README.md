@@ -29,7 +29,7 @@
 ---
 
 ## About
-  
+
 **NBGCurrencyNET** is a **high-quality** C# wrapper for NBG Currency API
 
 It comes with a built-in **optimized**, **simple** client which can be used to make all the basic requests to the Georgian LARI currency API.
@@ -37,26 +37,33 @@ It comes with a built-in **optimized**, **simple** client which can be used to m
 You don't need to look up anything about how the API works and how you have to manage the SOAP requests.(compared to default settings). With the help of an abstraction layer it will be just a few lines to make things work.
 
 Supported Currencies:
+
 ```
 AED, AMD, AUD, AZN, BGN, BYR, CAD, CHF, CNY, CZK, DKK, EEK, EGP, EUR, GBP, HKD, HUF, ILS, INR, IRR, ISK, JPY, KGS, KWD, KZT, LTL, LVL, MDL, NOK, NZD, PLN, RON, RSD, RUB, SEK, SGD, TJS, TMT, TRY, UAH, USD, UZS
 ```
+
 ## Installation
 
 ![Demonstration](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 
 ##### There are three ways to install the NBGCurrencyNET package :shipit:
-* Download/Clone and just put the binary in your project :+1: 
 
-* Use Visual Studio Package Console :+1: 
+- Download/Clone and just put the binary in your project :+1:
+
+- Use Visual Studio Package Console :+1:
+
 ```
 Install-Package nbgcurrencynet -Version 1.0.0
 ```
-* Use dotnet CLI :+1: 
+
+- Use dotnet CLI :+1:
+
 ```
 dotnet add package nbgcurrencynet --version 1.0.0
 ```
 
 ## Using NBGCurrencyNET in your project
+
 You can use NBGCurrencyNET in you project by directly `using` the main namespace.
 
 To get you up and running, let's take a look at few usage examples.
@@ -70,8 +77,7 @@ Of course all of the methods are async and you need to call them with await.
 - `GetCurrencyChangeAsync` -> `float`
 - `GetCurrencyDescriptionAsync` -> `string`
 - `GetCurrencyRateAsync` -> `int`
-- `GetCurrentDateAsync`  -> `DateTime`
-
+- `GetCurrentDateAsync` -> `DateTimeOffset`
 
 ```c#
 using System;
@@ -107,16 +113,10 @@ Got **something interesting** you'd like to **share**? Feel free to open an issu
 
 ## Support
 
-If you will like my work, just STAR repository.
+If you will like my work, make sure to star the repository.
 
 Reach out to me at one of my socials:
 
 - [Facebook](https://www.facebook.com/microg)
 - [Twitter](https://twitter.com/tornikegomareli)
 - [E-Mail](mailto:gomarelidevelopment@gmail.com)
-
-## License
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-- Copyright © [TornikeGomareli](https://twitter.com/tornikegomareli).

@@ -19,17 +19,17 @@ namespace NBGCurrency.Tests
         {
             // This test might fail because the NGB web-server misbehaves and responds with an incorrect timestamp.
             var currentValue = await client.GetCurrentDateAsync();
-            var currentDateTime = DateTime.Now.Date;
+            var currentDateTime = DateTimeOffset.Now;
 
             Assert.AreEqual(currentValue, currentDateTime);
         }
 
         [Test]
-        public async Task Test_Current_Date_Type_Is_DateTime()
+        public async Task Test_Current_Date_Type_Is_DateTimeOffset()
         {
             var currentValue = await client.GetCurrentDateAsync();
 
-            Assert.IsInstanceOf(typeof(DateTime), currentValue);
+            Assert.IsInstanceOf(typeof(DateTimeOffset), currentValue);
         }
 
         [Test]
