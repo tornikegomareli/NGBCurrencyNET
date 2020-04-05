@@ -32,9 +32,9 @@
   
 **NBGCurrencyNET** is a **high-quality** C# wrapper for NBG Currency API
 
-It comes **filled** with **optimized** and **simple** Client which will be used to make all basic requests for Georgian LARI currency.
+It comes with a built-in **optimized**, **simple** client which can be used to make all the basic requests to the Georgian LARI currency API.
 
-You don't neeed to know anything how API WORKS and how you must manage SOAP requests.(compared to default settings). With the help of abstraction layer it will be just a few lines to make things work.
+You don't need to look up anything about how the API works and how you have to manage the SOAP requests.(compared to default settings). With the help of an abstraction layer it will be just a few lines to make things work.
 
 Supported Currencies:
 ```
@@ -42,10 +42,10 @@ AED, AMD, AUD, AZN, BGN, BYR, CAD, CHF, CNY, CZK, DKK, EEK, EGP, EUR, GBP, HKD, 
 ```
 ## Installation
 
-![ExampleCode](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
+![Demonstration](https://media.giphy.com/media/W2p1C9gme1ExcyxyT6/giphy.gif)
 
-##### There is three way to install NBGCurrencyNET :shipit:
-* Download/Clone and just put dll in your project :+1: 
+##### There are three ways to install the NBGCurrencyNET package :shipit:
+* Download/Clone and just put the binary in your project :+1: 
 
 * Use Visual Studio Package Console :+1: 
 ```
@@ -57,20 +57,20 @@ dotnet add package nbgcurrencynet --version 1.0.0
 ```
 
 ## Using NBGCurrencyNET in your project
-You can use NBGCurrencyNET in you project by either directly using main namespace.
+You can use NBGCurrencyNET in you project by directly `using` the main namespace.
 
-To get you started quickly, let's take a look at a few ways to get simple Hello World project working.
+To get you up and running, let's take a look at few usage examples.
 
-Our Hello World project has just one source file, `Program.cs` file, and it looks like this:
+Our Hello World project has just one source file, `Program.cs` which looks like this:
 
-Main client is NBGCurrencyClient, which is thread-safe singleton. All required method you can find in this class.
+Main client is the NBGCurrencyClient, which is a thread-safe singleton. All required methods are located in this class.
 Of course all of the methods are async and you need to call them with await.
 
-- GetCurrencyAsync -> float
-- GetCurrencyChangeAsync -> float
-- GetCurrencyDescriptionAsync -> string
-- GetCurrencyRateAsync -> int
-- GetCurrentDateAsync  -> DateTime
+- `GetCurrencyAsync` -> `float`
+- `GetCurrencyChangeAsync` -> `float`
+- `GetCurrencyDescriptionAsync` -> `string`
+- `GetCurrencyRateAsync` -> `int`
+- `GetCurrentDateAsync`  -> `DateTime`
 
 
 ```c#
@@ -99,7 +99,7 @@ namespace HelloWorld
 
 ## Contributing
 
-Got **something interesting** you'd like to **share**? Feel free to open issue
+Got **something interesting** you'd like to **share**? Feel free to open an issue.
 
 ## Author
 
@@ -109,11 +109,11 @@ Got **something interesting** you'd like to **share**? Feel free to open issue
 
 If you will like my work, just STAR repository.
 
-Reach out to me at one of the following places:
+Reach out to me at one of my socials:
 
-- Facebook at [FB](https://www.facebook.com/microg)
-- Twitter **[tornikegomareli](https://twitter.com/tornikegomareli)**
-- E-Mail: **gomarelidevelopment@gmail.com**
+- [Facebook](https://www.facebook.com/microg)
+- [Twitter](https://twitter.com/tornikegomareli)
+- [E-Mail](mailto:gomarelidevelopment@gmail.com)
 
 ## License
 

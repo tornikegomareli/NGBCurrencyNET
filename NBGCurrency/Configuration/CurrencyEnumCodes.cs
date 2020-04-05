@@ -1,5 +1,4 @@
-﻿using System;
-namespace NBGCurrency.Configuration
+﻿namespace NBGCurrency.Configuration
 {
     public enum CurrencyEnumCodes
     {
