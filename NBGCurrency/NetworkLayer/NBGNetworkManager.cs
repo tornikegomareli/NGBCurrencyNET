@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
 using NBGCurrency.Configuration;
-using NBGCurrency.Extensions;
 
 namespace NBGCurrency.NetworkLayer
 {
@@ -19,27 +13,14 @@ namespace NBGCurrency.NetworkLayer
         {
         }
 
-        private static NBGNetworkManager _instance;
-        private static volatile object _rootLock = new object();
-
+        private static readonly Lazy<NBGNetworkManager> _instance = new Lazy<NBGNetworkManager>(() => new NBGNetworkManager());
         internal static NBGNetworkManager SharedInstance
         {
-            get 
-			{
-                if (_instance == null)
-                {
-                    lock (_rootLock)
-                    {
-                        if (_instance == null)
-                        {
-                            _instance = new NBGNetworkManager();
-					}
-                    }
-                }
-
-                return _instance;
+            get
+            {
+                return _instance.Value;
             }
-		}
+        }
 
 
         internal async Task<string> MakeNBGCurrentDateCall(string actionName)
@@ -51,15 +32,15 @@ namespace NBGCurrency.NetworkLayer
               </Body>
           </Envelope>";
 
-          HttpResponseMessage response = await XmlRequestAsync(Constants.NBGPhpServerApiUrl, envelopeString);
+            HttpResponseMessage response = await XmlRequestAsync(Constants.NBGPhpServerApiUrl, envelopeString);
 
-          string content = await response.Content.ReadAsStringAsync();
+            string content = await response.Content.ReadAsStringAsync();
 
-          return content;
+            return content;
         }
 
-        internal async Task<string> MakeNBGCurrencyEnvelope(string actionName, string currency) 
-		{
+        internal async Task<string> MakeNBGCurrencyEnvelope(string actionName, string currency)
+        {
             var currentEnvelopeString = CreateNBGSoapEnvelope(actionName, currency);
 
             HttpResponseMessage response = await XmlRequestAsync(Constants.NBGPhpServerApiUrl, currentEnvelopeString);

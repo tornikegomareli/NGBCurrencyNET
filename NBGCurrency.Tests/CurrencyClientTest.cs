@@ -17,10 +17,11 @@ namespace NBGCurrency.Tests
         [Test]
         public async Task Test_Current_Date_Is_Correct()
         {
-           var currentValue = await client.GetCurrentDateAsync();
-           var currentDateTime = DateTime.Now.Date;
+            // This test might fail because the NGB web-server misbehaves and responds with an incorrect timestamp.
+            var currentValue = await client.GetCurrentDateAsync();
+            var currentDateTime = DateTime.Now.Date;
 
-           Assert.AreEqual(currentValue, currentDateTime);
+            Assert.AreEqual(currentValue, currentDateTime);
         }
 
         [Test]
