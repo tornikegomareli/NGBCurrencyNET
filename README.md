@@ -105,7 +105,7 @@ namespace HelloWorld
 
 ## Contributing
 
-Got **something interesting** you'd like to **share**? Feel free to open an issue.
+Got **something interesting** you'd like to **share**? Feel free to open an issue and share your ideas.
 
 ## Author
 
