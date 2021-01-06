@@ -8,7 +8,7 @@ namespace NBGCurrency.Configuration
         internal static string MainWsdlUrl = "http://nbg.gov.ge/currency.wsdl";
         internal static string NBGPhpServerApiUrl = "http://nbg.gov.ge/currency_service.php";
 
-        public static Dictionary<CurrencyEnumCodes, String> CurrencyCodes = new Dictionary<CurrencyEnumCodes, string>()
+        public static IReadOnlyDictionary<CurrencyEnumCodes, String> CurrencyCodes = new Dictionary<CurrencyEnumCodes, string>()
         {
             {CurrencyEnumCodes.AED, "AED" },
             {CurrencyEnumCodes.AMD, "AMD" },
